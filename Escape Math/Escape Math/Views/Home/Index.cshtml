@@ -2,28 +2,44 @@
     ViewBag.Title = "Escape Math";
 }
 
-<div class="jumbotron">
-    <h1>ESCAPE MATH</h1>
-    <p class="lead">Este será un foro donde se publicara semanalmente los mejores jugadores de acuerdo a su puntaje, también, el usuario podrá publicar post de acuerdo a diferentes tematicas</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Rangos</h2>
-        <p>
-            Encontrarás los rangos disponibles para la compra, esto te dará una mejor experiencia en el foro como en el juego ¿Qué esperas? ¡Anímate!
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="col-md-4">
-        <h2>Mejores jugadores</h2>
-        <p>¡Aquí podrás ver tu nombre si eres de los participantes más astutos! ¿Lograrás llegar al top #1? </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="~/Imagenes/mqdefault.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Capture 1</h5>
+                <p>Nuestro logo</p>
+            </div>
+          
+
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="~/Imagenes/juegos-escaperoom-online-1155x630.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Capture 2</h5>
+                <p>Esta imagen representa nuestro juego al 100%</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/Imagenes/images.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Capture 3</h5>
+                <p>¡Otra increible capture donde evidencias nuestro divertido juego!.</p>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Foro</h2>
-        <p>En esta sección podrás dejar reporte de Bugs, Glitch e incluso reporte de uso de hacks ¡Ayúdanos a tener un juego sano y transparente!</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>

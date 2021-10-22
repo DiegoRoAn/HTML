@@ -81,6 +81,5 @@ C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\bin\es\System.Web
 C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\bin\es\System.Web.WebPages.Razor.resources.dll
 C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\obj\Debug\Escape Math.csproj.AssemblyReference.cache
 C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\obj\Debug\Escape Math.csproj.CoreCompileInputs.cache
-C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\obj\Debug\Escape Math.csproj.CopyComplete
 C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\obj\Debug\Escape Math.dll
 C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\obj\Debug\Escape Math.pdb
