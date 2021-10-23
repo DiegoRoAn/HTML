@@ -83,3 +83,7 @@ C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\obj\Debug\Escape 
 C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\obj\Debug\Escape Math.csproj.CoreCompileInputs.cache
 C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\obj\Debug\Escape Math.dll
 C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\obj\Debug\Escape Math.pdb
+C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\bin\EntityFramework.dll
+C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\bin\EntityFramework.SqlServer.dll
+C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\bin\EntityFramework.xml
+C:\Users\TbDie\Desktop\MiPrimeraPagina\Escape Math\Escape Math\bin\EntityFramework.SqlServer.xml

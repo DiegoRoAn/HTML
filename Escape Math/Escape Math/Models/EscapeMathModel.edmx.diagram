@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c219f3422d86448490c0903e8f8c337e" Name="Diagram1">
+        <EntityTypeShape EntityType="EscapeMathModel.tCategoria" Width="1.5" PointX="2" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscapeMathModel.tDetalleVenta" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscapeMathModel.tPost" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscapeMathModel.tRangos" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscapeMathModel.tTarjeta" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscapeMathModel.tUsuarios" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscapeMathModel.tVenta" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="EscapeMathModel.FK_tPost" ManuallyRouted="false" />
+        <AssociationConnector Association="EscapeMathModel.FK_DetalleVenta" ManuallyRouted="false" />
+        <AssociationConnector Association="EscapeMathModel.FK_DetalleVenta2" ManuallyRouted="false" />
+        <AssociationConnector Association="EscapeMathModel.FK_tPost2" ManuallyRouted="false" />
+        <AssociationConnector Association="EscapeMathModel.FK_tUsuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="EscapeMathModel.FK_tTarjeta" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EscapeMathModelStoreContainer" CdmEntityContainer="EscapeMathEntities1">
+    <EntitySetMapping Name="tCategoria">
+      <EntityTypeMapping TypeName="EscapeMathModel.tCategoria">
+        <MappingFragment StoreEntitySet="tCategoria">
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+          <ScalarProperty Name="Nombre_Categoria" ColumnName="Nombre_Categoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tDetalleVenta">
+      <EntityTypeMapping TypeName="EscapeMathModel.tDetalleVenta">
+        <MappingFragment StoreEntitySet="tDetalleVenta">
+          <ScalarProperty Name="idDetalleVenta" ColumnName="idDetalleVenta" />
+          <ScalarProperty Name="idventa" ColumnName="idventa" />
+          <ScalarProperty Name="idrangos" ColumnName="idrangos" />
+          <ScalarProperty Name="catidad" ColumnName="catidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tPost">
+      <EntityTypeMapping TypeName="EscapeMathModel.tPost">
+        <MappingFragment StoreEntitySet="tPost">
+          <ScalarProperty Name="idPost" ColumnName="idPost" />
+          <ScalarProperty Name="Nombre_post" ColumnName="Nombre_post" />
+          <ScalarProperty Name="Contenido_post" ColumnName="Contenido_post" />
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tRangos">
+      <EntityTypeMapping TypeName="EscapeMathModel.tRangos">
+        <MappingFragment StoreEntitySet="tRangos">
+          <ScalarProperty Name="idRangos" ColumnName="idRangos" />
+          <ScalarProperty Name="Nombre_rangos" ColumnName="Nombre_rangos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tTarjeta">
+      <EntityTypeMapping TypeName="EscapeMathModel.tTarjeta">
+        <MappingFragment StoreEntitySet="tTarjeta">
+          <ScalarProperty Name="idTarjeta" ColumnName="idTarjeta" />
+          <ScalarProperty Name="Ccv_tarjeta" ColumnName="Ccv_tarjeta" />
+          <ScalarProperty Name="fecha_vencimiento" ColumnName="fecha_vencimiento" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tUsuarios">
+      <EntityTypeMapping TypeName="EscapeMathModel.tUsuarios">
+        <MappingFragment StoreEntitySet="tUsuarios">
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="Nombre_cliente" ColumnName="Nombre_cliente" />
+          <ScalarProperty Name="apellidos_cliente" ColumnName="apellidos_cliente" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="idRangos" ColumnName="idRangos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tVenta">
+      <EntityTypeMapping TypeName="EscapeMathModel.tVenta">
+        <MappingFragment StoreEntitySet="tVenta">
+          <ScalarProperty Name="idVenta" ColumnName="idVenta" />
+          <ScalarProperty Name="Fecha_venta" ColumnName="Fecha_venta" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

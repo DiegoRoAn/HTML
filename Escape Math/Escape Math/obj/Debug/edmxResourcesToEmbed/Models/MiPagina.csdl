@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EscapeMathModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tCategoria">
+    <Key>
+      <PropertyRef Name="idCategoria" />
+    </Key>
+    <Property Name="idCategoria" Type="Int32" Nullable="false" />
+    <Property Name="Nombre_Categoria" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tPost" Relationship="Self.FK_tPost" FromRole="tCategoria" ToRole="tPost" />
+  </EntityType>
+  <EntityType Name="tDetalleVenta">
+    <Key>
+      <PropertyRef Name="idDetalleVenta" />
+    </Key>
+    <Property Name="idDetalleVenta" Type="Int64" Nullable="false" />
+    <Property Name="idventa" Type="Int64" Nullable="false" />
+    <Property Name="idrangos" Type="Int32" Nullable="false" />
+    <Property Name="catidad" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="tVenta" Relationship="Self.FK_DetalleVenta" FromRole="tDetalleVenta" ToRole="tVenta" />
+    <NavigationProperty Name="tRangos" Relationship="Self.FK_DetalleVenta2" FromRole="tDetalleVenta" ToRole="tRangos" />
+  </EntityType>
+  <EntityType Name="tPost">
+    <Key>
+      <PropertyRef Name="idPost" />
+    </Key>
+    <Property Name="idPost" Type="Int32" Nullable="false" />
+    <Property Name="Nombre_post" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contenido_post" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idCategoria" Type="Int32" Nullable="false" />
+    <Property Name="idCliente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tCategoria" Relationship="Self.FK_tPost" FromRole="tPost" ToRole="tCategoria" />
+    <NavigationProperty Name="tUsuarios" Relationship="Self.FK_tPost2" FromRole="tPost" ToRole="tUsuarios" />
+  </EntityType>
+  <EntityType Name="tRangos">
+    <Key>
+      <PropertyRef Name="idRangos" />
+    </Key>
+    <Property Name="idRangos" Type="Int32" Nullable="false" />
+    <Property Name="Nombre_rangos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tDetalleVenta" Relationship="Self.FK_DetalleVenta2" FromRole="tRangos" ToRole="tDetalleVenta" />
+    <NavigationProperty Name="tUsuarios" Relationship="Self.FK_tUsuarios" FromRole="tRangos" ToRole="tUsuarios" />
+  </EntityType>
+  <EntityType Name="tTarjeta">
+    <Key>
+      <PropertyRef Name="idTarjeta" />
+    </Key>
+    <Property Name="idTarjeta" Type="Int64" Nullable="false" />
+    <Property Name="Ccv_tarjeta" Type="Int32" Nullable="false" />
+    <Property Name="fecha_vencimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idCliente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tUsuarios" Relationship="Self.FK_tTarjeta" FromRole="tTarjeta" ToRole="tUsuarios" />
+  </EntityType>
+  <EntityType Name="tUsuarios">
+    <Key>
+      <PropertyRef Name="idCliente" />
+    </Key>
+    <Property Name="idCliente" Type="Int32" Nullable="false" />
+    <Property Name="Nombre_cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apellidos_cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telefono" Type="Int64" Nullable="false" />
+    <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idRangos" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tPost" Relationship="Self.FK_tPost2" FromRole="tUsuarios" ToRole="tPost" />
+    <NavigationProperty Name="tRangos" Relationship="Self.FK_tUsuarios" FromRole="tUsuarios" ToRole="tRangos" />
+    <NavigationProperty Name="tTarjeta" Relationship="Self.FK_tTarjeta" FromRole="tUsuarios" ToRole="tTarjeta" />
+  </EntityType>
+  <EntityType Name="tVenta">
+    <Key>
+      <PropertyRef Name="idVenta" />
+    </Key>
+    <Property Name="idVenta" Type="Int64" Nullable="false" />
+    <Property Name="Fecha_venta" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Total" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="tDetalleVenta" Relationship="Self.FK_DetalleVenta" FromRole="tVenta" ToRole="tDetalleVenta" />
+  </EntityType>
+  <Association Name="FK_tPost">
+    <End Role="tCategoria" Type="Self.tCategoria" Multiplicity="1" />
+    <End Role="tPost" Type="Self.tPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tCategoria">
+        <PropertyRef Name="idCategoria" />
+      </Principal>
+      <Dependent Role="tPost">
+        <PropertyRef Name="idCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleVenta">
+    <End Role="tVenta" Type="Self.tVenta" Multiplicity="1" />
+    <End Role="tDetalleVenta" Type="Self.tDetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tVenta">
+        <PropertyRef Name="idVenta" />
+      </Principal>
+      <Dependent Role="tDetalleVenta">
+        <PropertyRef Name="idventa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleVenta2">
+    <End Role="tRangos" Type="Self.tRangos" Multiplicity="1" />
+    <End Role="tDetalleVenta" Type="Self.tDetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tRangos">
+        <PropertyRef Name="idRangos" />
+      </Principal>
+      <Dependent Role="tDetalleVenta">
+        <PropertyRef Name="idrangos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tPost2">
+    <End Role="tUsuarios" Type="Self.tUsuarios" Multiplicity="1" />
+    <End Role="tPost" Type="Self.tPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tUsuarios">
+        <PropertyRef Name="idCliente" />
+      </Principal>
+      <Dependent Role="tPost">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tUsuarios">
+    <End Role="tRangos" Type="Self.tRangos" Multiplicity="1" />
+    <End Role="tUsuarios" Type="Self.tUsuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tRangos">
+        <PropertyRef Name="idRangos" />
+      </Principal>
+      <Dependent Role="tUsuarios">
+        <PropertyRef Name="idRangos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tTarjeta">
+    <End Role="tUsuarios" Type="Self.tUsuarios" Multiplicity="1" />
+    <End Role="tTarjeta" Type="Self.tTarjeta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tUsuarios">
+        <PropertyRef Name="idCliente" />
+      </Principal>
+      <Dependent Role="tTarjeta">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EscapeMathEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tCategoria" EntityType="Self.tCategoria" />
+    <EntitySet Name="tDetalleVenta" EntityType="Self.tDetalleVenta" />
+    <EntitySet Name="tPost" EntityType="Self.tPost" />
+    <EntitySet Name="tRangos" EntityType="Self.tRangos" />
+    <EntitySet Name="tTarjeta" EntityType="Self.tTarjeta" />
+    <EntitySet Name="tUsuarios" EntityType="Self.tUsuarios" />
+    <EntitySet Name="tVenta" EntityType="Self.tVenta" />
+    <AssociationSet Name="FK_tPost" Association="Self.FK_tPost">
+      <End Role="tCategoria" EntitySet="tCategoria" />
+      <End Role="tPost" EntitySet="tPost" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleVenta" Association="Self.FK_DetalleVenta">
+      <End Role="tVenta" EntitySet="tVenta" />
+      <End Role="tDetalleVenta" EntitySet="tDetalleVenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleVenta2" Association="Self.FK_DetalleVenta2">
+      <End Role="tRangos" EntitySet="tRangos" />
+      <End Role="tDetalleVenta" EntitySet="tDetalleVenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tPost2" Association="Self.FK_tPost2">
+      <End Role="tUsuarios" EntitySet="tUsuarios" />
+      <End Role="tPost" EntitySet="tPost" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tUsuarios" Association="Self.FK_tUsuarios">
+      <End Role="tRangos" EntitySet="tRangos" />
+      <End Role="tUsuarios" EntitySet="tUsuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tTarjeta" Association="Self.FK_tTarjeta">
+      <End Role="tUsuarios" EntitySet="tUsuarios" />
+      <End Role="tTarjeta" EntitySet="tTarjeta" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
