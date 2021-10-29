@@ -1,5 +1,70 @@
-﻿@{
-    ViewBag.Title = "Rangos";
-}
-<h2>@ViewBag.Title.</h2>
+﻿
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+    <h1 class="display-4 mt-4">Lista de Productos</h1>
+    <p class="lead">Selecciona uno de nuestros productos y accede a un descuento</p>
+</div>
+
+<div class="container" id="lista-productos">
+
+    <div class="card-deck mb-3 text-center">
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-bold">DIAMANTE</h4>
+            </div>
+            <div class="card-body">
+                <img src="~/Imagenes/Diamantes.jpg" class="card-img-top">
+                <h1 class="card-title pricing-card-title precio">$<span class="">160.000 (COP) ¡30% de descuento!</span></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li></li>
+                    <li>Libertad al 100% en el foro, seras el *LIDER*</li>
+                    <li>Acceso ilimitado al juego</li>
+                    <li> EL RANGO DE LOS EMPERADORES </li>
+                </ul>
+                <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">¡Agregar al carrito! ¿Te animas?</a>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-bold">ORO</h4>
+            </div>
+            <div class="card-body">
+                <img src="~/Imagenes/3-oro-nuevo.jpg" class="card-img-top">
+                <h1 class="card-title pricing-card-title precio">$<span class="">110.000 (COP) ¡20% de descuento!</span></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li></li>
+                    <li>Tendras limites pequeños limites en el foro, de resto seras *INCREIBLE*</li>
+                    <li>Limite de post y comentarios, acceso las 24 horas</li>
+                    <li> EL RANGO DE LOS REYES </li>
+                </ul>
+                <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">¡Agregar al carrito! ¿Te animas?</a>
+            </div>
+        </div>
+  
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-bold">BRONCE</h4>
+            </div>
+            <div class="card-body">
+                <img src="~/Imagenes/1-bronce-nuevo-0.jpg" class="card-img-top">
+                <h1 class="card-title pricing-card-title precio">$<span class="">60.000 (COP) ¡10% de descuento!</span></h1> 
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li></li>
+                    <li>Seras un VIP de primer nivel, sin embargo, tienes superioridad</li>
+                    <li>Podras ver posts y comentarios limitados por semana</li>
+                    <li> EL RANGO DE LOS CONDES </li>
+                </ul>
+                <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="3">¡Agregar al carrito! ¿Te animas?</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src='~/Scripts/carrito.js'></script>
+<script src='~/Scripts/pedido.js'></script>
 

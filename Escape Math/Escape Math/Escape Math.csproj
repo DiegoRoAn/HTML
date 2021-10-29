@@ -175,14 +175,20 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Estilos\StyleSheet1.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imagenes\1-bronce-nuevo-0.jpg" />
+    <Content Include="Imagenes\3-oro-nuevo.jpg" />
     <Content Include="Imagenes\Captura.PNG" />
+    <Content Include="Imagenes\cart.jpeg" />
+    <Content Include="Imagenes\cart.jpg" />
     <Content Include="Imagenes\Cerebrin.png" />
     <Content Include="Imagenes\Cerebro.PNG" />
     <Content Include="Imagenes\descargar.png" />
+    <Content Include="Imagenes\Diamantes.jpg" />
     <Content Include="Imagenes\images.jpg" />
     <Content Include="Imagenes\juegos-escaperoom-online-1155x630.jpg" />
     <Content Include="Imagenes\Logo.png" />
@@ -338,6 +344,7 @@
       <DependentUpon>EscapeMathModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\carrito.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -348,6 +355,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\pedido.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
