@@ -7,9 +7,18 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 <h2>Foro</h2>
+<div>
+    <input type="button" value="Agregar Post" onclick="RedireccionarInsert()" class="btn btn-primary" />
+
+</div>
+<br />
 <table id="grid"></table>
 <script type="text/javascript">
     $(document).ready(function () {
         ListarForos();
-    })
+    });
+
+    function RedireccionarInsert() {
+        window.location = "/foro/InsertarPost"
+    }
 </script>

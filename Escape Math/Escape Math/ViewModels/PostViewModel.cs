@@ -10,7 +10,15 @@ namespace Escape_Math.ViewModels
         public int  idPost { get; set; }
         public string Nombre_post { get; set; }
         public string Contenido_post { get; set; }
-        public DateTime Fecha { get; set; }
+
+
 
     }
+
+    public class RespuestaSqlViewModels
+    {
+        public string Codigo { get; set; }
+        public string resultado { get; set; }
+    }
+
 }

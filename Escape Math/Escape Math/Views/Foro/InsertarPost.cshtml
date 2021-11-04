@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Inserta tu Post";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Inserta tu Post</h2>
+<script type="text/javascript" src="~/Scripts/Page/Foros.js"></script>
+<div>
+    <div class="form-group col-md-4">
+        <span>Nombre</span>
+        <input id="txtNombre" class="form-control" />
+    </div>
+    <div class="form-group col-md-4">
+        <span>Contenido</span>
+        <input id="txtContenido" class="form-control" />
+    </div>
+    <div class="form-group col-md-12">
+        <input type="button" value="Agregar" onclick="InsertarForo()" class="btn btn-primary" />
+    </div>
+    <br />
+</div>
+

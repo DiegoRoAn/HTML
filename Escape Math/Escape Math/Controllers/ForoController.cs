@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -17,6 +18,12 @@ namespace Escape_Math.Controllers
             return View();
         }
 
+        public ActionResult InsertarPost()
+        {
+            return View();
+        }
+
+
         public JsonResult GetListPost()
         {
             var ListadoForos = ListarForos();
@@ -24,11 +31,35 @@ namespace Escape_Math.Controllers
 
         }
 
+        [HttpPost]
+        public JsonResult PostInsertarPostt(PostViewModel model)
+        {
+            var responseData = InsertarPostt(model.Nombre_post, model.Contenido_post);
+            return Json(responseData, JsonRequestBehavior.AllowGet);
+        }
+
         public List <PostViewModel> ListarForos()
         {
             try
             {
                 var data = _ctx.Database.SqlQuery<PostViewModel>("SP_LISTAR_POST").ToList();
+                return data;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+        public RespuestaSqlViewModels InsertarPostt(string nombre, string contenido)
+        {
+            try
+            {
+                var data = _ctx.Database.SqlQuery<RespuestaSqlViewModels>("SP_INSERTAR_POST @Nombre_post, @Contenido_post",
+                    new SqlParameter("@Nombre_post", nombre),
+                    new SqlParameter("@Contenido_post", contenido)).FirstOrDefault();
                 return data;
             }
             catch (Exception ex)
