@@ -12,8 +12,9 @@
                 dataSource: listado,
                 columns: [
                     { field: 'idPost', title: 'Identificador' ,width: 100 },
-                    { field: 'Nombre_post', title: 'Nombre del post', sortable: true },
-                    { field: 'Contenido_post', title: 'Contenido',sortable: true }
+                    { field: 'Nombre_post', title: 'Nombre del post', width: 50 },
+                    { field: 'Contenido_post', title: 'Contenido', sortable: true },
+                    { field: 'fecha', title: 'Fecha de publicacion', sortable: true }
                 ],
                 pager: { limit: 5 }
             });
